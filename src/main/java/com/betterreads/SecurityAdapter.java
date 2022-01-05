@@ -1,4 +1,4 @@
-package io.javabrains;
+package com.betterreads;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -32,3 +32,4 @@ public class SecurityAdapter extends WebSecurityConfigurerAdapter {
     }
     
 }
+

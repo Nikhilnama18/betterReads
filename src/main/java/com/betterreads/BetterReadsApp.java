@@ -1,4 +1,4 @@
-package io.javabrains;
+package com.betterreads;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BetterReadsApp {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BetterReadsApp.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BetterReadsApp.class, args);
+    }
 
-	@RequestMapping("/user")
-	public String user(@AuthenticationPrincipal OAuth2User principal) {
-		System.out.println(principal);
-		return principal.getAttribute("name");
-	}
+    @RequestMapping("/user")
+    public String user(@AuthenticationPrincipal OAuth2User principal) {
+        System.out.println(principal);
+        return principal.getAttribute("name");
+    }
 }
